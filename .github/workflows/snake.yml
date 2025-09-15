@@ -1,46 +1,32 @@
-name: GitHub Snake Game
+name: Generate Snake
 
 on:
-  # Executa todo dia à meia-noite UTC
   schedule:
     - cron: "0 0 * * *"
-
-  # Permite rodar manualmente
   workflow_dispatch:
-
-  # Executa também em pushes para a branch main
   push:
     branches:
       - main
 
 jobs:
-  generate:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      # Passo 1: Baixar o repositório
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      # Passo 2: Gerar animações da cobrinha
-      - name: Generate GitHub Contributions Snake Animations
+      - name: Generate Snake files
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      # Passo 3: Publicar arquivos na branch output
-      - name: Deploy to Output Branch
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Upload to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: output
-          force_orphan: true
-          commit_message: "Update snake animation [skip ci]"
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
