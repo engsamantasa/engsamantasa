@@ -1,8 +1,7 @@
 <h3 align="center">👋 Hi there, I'm Samanta Sá</h3>
 
 <p align="center">
-  <a href="https://linkedin.com/in/engsamantasa">LinkedIn</a> •
-  <a href="https://instagram.com/samantaks">Instagram</a>
+  <a href="https://linkedin.com/in/engsamantasa">LinkedIn</a>
 </p>
 
 ---
@@ -19,7 +18,7 @@ Outside of tech, I enjoy music, sports, reading, and traveling. 🎶⚽📚✈�
 
 ---
 
-- 📫 Reach me on [Instagram](https://instagram.com/SEU-INSTAGRAM)  
+- 📫 Reach me on [Instagram](https://instagram.com/samantaks)  
 - 😄 Pronouns: She/Her  
 
 
