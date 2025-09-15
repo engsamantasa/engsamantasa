@@ -10,9 +10,9 @@ I'm currently learning building tools and AST.
 <summary>⚡️ More about my coding life</summary>
 <br />
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=zheeeng&layout=compact&hide=css,html)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=engsamantasa&layout=compact&hide=css)
 
-![Zheeeng's github stats](https://github-readme-stats.vercel.app/api?username=zheeeng&count_private=true&show_icons=true&theme=onedark)
+![Zheeeng's github stats](https://github-readme-stats.vercel.app/api?username=engsamantasa&count_private=true&show_icons=true&theme=onedark)
 
 </details>
 
