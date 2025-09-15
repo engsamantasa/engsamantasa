@@ -1,36 +1,27 @@
-name: GitHub Snake Game
+name: generate-snake
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */12 * * *" # Atualiza a cada 12h
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 jobs:
   generate:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
 
     steps:
-      # Passo 1: Baixar o repositório
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Passo 2: Gerar animações da cobrinha personalizada
-      - name: Generate GitHub Contributions Snake Animations
+      - name: Generate snake animation
         uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg?color_snake=red&color_dots=#0d1117,#161b22,#21262d
-            dist/github-snake-dark.svg?palette=github-dark&color_snake=red&color_dots=#0d1117,#161b22,#21262d
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
 
-      # Passo 3: Publicar arquivos na branch output
-      - name: Deploy to Output Branch
+      - name: Push generated files
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
