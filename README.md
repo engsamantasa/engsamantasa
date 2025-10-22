@@ -7,12 +7,12 @@
 ---
 
 I'm a Computer Engineering graduate from the State University of Maranhão with hands-on experience in Web Development and Database Administration.  
-I work primarily with <strong>Python, Django, PHP, MySQL, and JavaScript</strong>.  
+I work primarily with <strong>Python, Django, Java, PHP, MySQL, and JavaScript</strong>.  
 
 I’m an active member of my local Python community and enjoy attending tech events to learn and grow.  
 My philosophy is simple: I’m always open to change and eager to learn more.  
 
-Currently, I’m studying Data Science with Python and looking forward to deepening my knowledge to work more effectively with Oracle databases.  
+Currently, I’m studying Back-End with Java and looking forward to deepening my knowledge to work more effectively with Oracle databases.  
 
 Outside of tech, I enjoy music, sports, reading, and traveling. 🎶⚽📚✈️
 
